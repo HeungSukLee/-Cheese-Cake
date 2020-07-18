@@ -1,9 +1,11 @@
 class CardTest{ //Card 사용의 example
+    //카드클래스생성하고 그것을 사용 
+    //static변수는 객체를 생성하지 않고도 바로 사용이 가능하다는 점을 유의
     public static void main(String args[]) {
-        System.out.println("Card.width = "  + Card.width); //width와 height는 static변수이므로 객체를 생성하지 않고도 바로 사용 가능.
+        System.out.println("Card.width = "  + Card.width); 
         System.out.println("Card.height = " + Card.height);
-
-        Card c1 = new Card();
+        
+        Card c1 = new Card(); //c1,c2객체생성
         c1.kind = "Heart";
         c1.number = 7;
 
@@ -24,8 +26,8 @@ class CardTest{ //Card 사용의 example
 }
 
 class Card {
-    String kind ;				// 카드의 무늬 - 인스턴스 변수
-    int number;				    // 카드의 숫자 - 인스턴스 변수
-    static int width = 100;		// 카드의 폭  - 클래스 변수
+    String kind ;				
+    int number;				   
+    static int width = 100;		// 카드의 폭  - 클래스 변수 // width,height는 카드 모두 동일해야하므로 static 선언
     static int height = 250;	// 카드의 높이 - 클래스 변수
 }

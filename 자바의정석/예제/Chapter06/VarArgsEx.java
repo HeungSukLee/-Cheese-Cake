@@ -1,8 +1,6 @@
-class VarArgsEx {
+class VarArgsEx {//2
     public static void main(String[] args) {
-
         String[] strArr = {"100", "200", "300"};
-
         System.out.println(concatenate("", "100", "200", "300"));
         System.out.println(concatenate("-", strArr));
         System.out.println(concatenate(",", new String[]{"1", "2", "3"}));
@@ -14,7 +12,7 @@ class VarArgsEx {
         String result = "";
 
         for (String str : args) {
-            result += str + delim; //배열의 요소를 출력하여 반환하는 함수
+            result += str + delim;
         }
 
         return result;

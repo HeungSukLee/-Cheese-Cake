@@ -1,4 +1,4 @@
-class PowerTest {
+class PowerTest {//재귀함수의 example
     public static void main(String[] args) {
         int x = 2;
         int n = 5;

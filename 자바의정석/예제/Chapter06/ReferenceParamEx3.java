@@ -1,13 +1,13 @@
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
-
-class ReferenceParamEx3 { // 참조형을 배개변수로 넘겨주어서 배열을 정렬,출력하는 example;
+class ReferenceParamEx3 {
+    //참조형을 매개변수로 넘겨서
+    //배열을 정렬하는 example
     public static void main(String[] args)
     {
         int[] arr = new int[] {3,2,1,6,5,4};
 
-        printArr(arr);  // 배열의 모든 요소를 출력
-        sortArr(arr);   // 배열을 정렬
-        printArr(arr);  // 정렬후 결과를 출력
+        printArr(arr);
+        sortArr(arr);
+        printArr(arr);
         System.out.println("sum="+sumArr(arr)); // 배열의 총합을 출력
     }
 

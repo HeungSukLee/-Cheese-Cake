@@ -13,6 +13,7 @@ class Data2 {
 class ConstructorTest {
     public static void main(String[] args) {
         Data1 d1 = new Data1();
-       //Data2 d2 = new Data2();		//기본생성자가 없으므로 당연히 compile error발생
+       //Data2 d2 = new Data2();// 기본생성자가 없으므로 에러
+        // Data2(int x) 가 호출된다.
     }
 }

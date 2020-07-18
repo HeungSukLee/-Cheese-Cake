@@ -1,4 +1,4 @@
-class DeckTest {
+class DeckTest { //덱은 카드를 포함한다는 example
     public static void main(String args[]) {
         Deck d = new Deck();	// 카드 한 벌(Deck)을 만든다.
         Card c = d.pick(0);	   	// 섞기 전에 제일 위의 카드를 뽑는다.
@@ -9,25 +9,20 @@ class DeckTest {
         System.out.println(c);
     }
 }
-
-// Deck클래스 //Deck은 카드를 포함한다.
-class Deck {
-
+class Deck { //덱클래스생성
     final int CARD_NUM = 52;	// 카드의 개수
-    Card cardArr[] = new Card[CARD_NUM];  // Card객체 배열을 포함
+    Card cardArr[] = new Card[CARD_NUM];  // Card객체 배열 생성
 
-    Deck () {	//초기화
+    Deck () {	// 생성자를통한 Card 배열 초기화
         int i=0;
-
-        for(int k=Card.KIND_MAX; k > 0; k--) // Deck에 있는 52장의 카드를 초기화 하는 방법.
+        for(int k=Card.KIND_MAX; k > 0; k--) // 이중 for문을 통한  Card 객체배열 초기화.
             for(int n=0; n < Card.NUM_MAX ; n++)
                 cardArr[i++] = new Card(k, n+1);
     }
 
     Card pick(int index) {	// Card 객체를 반환하는 객체형 함수
         return cardArr[index];
-    }
-
+    } // type이 카드객체인 함수 생성. 인덱스에따른 카드를 반환
     Card pick() {			// Deck에서 카드 하나를 선택한다.
         int index = (int)(Math.random() * CARD_NUM);
         return pick(index);

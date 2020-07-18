@@ -12,35 +12,31 @@ class Product { // 제품객체 생성
         bonusPoint = (int) (price / 10.0);
     }
 }
-
-class Tv3 extends Product { //TV3 객체생성 // 제품객체 상송
-
-    Tv3() {// tv는 제품을 상속하므로 제품객체의 인스턴스 변수를 가져온다. 이 값을 생성자를 통하여 초기화 한다.
-        // 조상클래스의 생성자 Product(int price)를 호출한다.
-        super(100);
+class Tv3 extends Product {
+    //Tv3 제품과 컴퓨터제품생성
+    //각자의 가격을 가진다.
+    Tv3() {
+        super(100); //슈퍼를통한
     }
-
     public String toString() {    // Object클래스의 toString()을 오버라이딩한다. // 외부에서 출력했을때 Tv가 출력이된다.
         return "Tv";
     }
 }
-
-class Computer extends Product { // COMPUTER객체생성
+class Computer extends Product { // COMPUTER객체생성 // 가격을가진다.
     Computer() { // super을 통한 컴퓨터의 인스턴스 변수 초기화
         super(200);
     }
-
     public String toString() { //외부에서 출력을 했을 떄 computer 출력
         return "Computer";
     }
 }
 
-class Buyer {            //고객 객체 생성
+
+class Buyer { //고객객체 -> money 와 보너스포인트를 가진다.
     int money = 1000;    // 소유금액
     int bonusPoint = 0;    // 보너스점수
 
-    void buy(Product p) { // 매개변수로 물품객체를 받는 buy함수 생성
-
+    void buy(Product p) { //구매함수생성 // Product p = new TV()  - > 다형성을 이용한다.
         if (money < p.price) {
             System.out.println("잔액이 부족하여 물건을 살수 없습니다.");
             return;
@@ -53,9 +49,9 @@ class Buyer {            //고객 객체 생성
 
 class PolyArgumentTest {
     public static void main(String args[]) {
-        Buyer b = new Buyer();
-
-        b.buy(new Tv3());
+        Buyer b = new Buyer(); // 구매자 객체생성
+        b.buy(new Tv3()); // buy함수를 통하여
+        //Tv와 컴퓨터 구매.
         b.buy(new Computer());
 
         System.out.println("현재 남은 돈은 " + b.money + "만원입니다.");

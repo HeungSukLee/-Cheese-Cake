@@ -6,25 +6,22 @@ class PointTest2 {
         System.out.println("p3.z=" + p3.z);
     }
 }
-class Point3 { //점객체생성
+class Point3 { // 조상객체
     int x=10;
     int y=20;
-
     Point3(int x, int y) {
         this.x = x;
         this.y = y;
     }
 }
-
-class Point3D2 extends Point3 {
+class Point3D2 extends Point3 { // 자손객체생성
     int z=30;
-
     Point3D2() {
         this(100, 200, 300);
     }
 
     Point3D2(int x, int y, int z) {
-        super(x, y);
+        super(x, y); // super를 통해 조상의 맴버변수 초기화.
         this.z = z;
     }
 }

@@ -1,7 +1,9 @@
+//개터와 새터를 사용하는 example
 public class TimeTest {
     public static void main(String[] args)
     {
         Time t = new Time(12,43,30);
+        //생성자 -> 새터함수 -> 인스턴스변수초기화진행
         System.out.println(t);
 //          t.hour = 13;
         t.setHour(t.getHour()+1);   // 현재시간보다 1시간 후로 변경한다.
@@ -10,9 +12,8 @@ public class TimeTest {
         System.out.println(t);      // System.out.println(t.toString());과 같다.
     }
 }
-
 class Time {
-    private int hour;
+    private int hour; //Time에 접근하지 못하게 private로 선언해두었다.
     private int minute;
     private int second;
 
@@ -21,7 +22,6 @@ class Time {
         setMinute(minute);
         setSecond(second);
     }
-
     public int getHour() { return hour; }
     public void setHour(int hour) {
         if (hour < 0 || hour > 23) return;

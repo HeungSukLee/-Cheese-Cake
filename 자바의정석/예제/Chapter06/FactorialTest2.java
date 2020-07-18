@@ -1,6 +1,6 @@
-class FactorialTest2 {
+class FactorialTest2 {//팩토리얼 example // factorial 함수는 static임을 유의하자.
     static long factorial(int n) {
-        if (n <= 0 || n > 20) return -1;  // -1을 반환함으로써, main함수에서 -1을 받았을 때 유효하지 않은 값임을 확인 할 수 있다.
+        if (n <= 0 || n > 20) return -1;
         if (n <= 1)
             return 1;
         return n * factorial(n - 1);
@@ -18,5 +18,5 @@ class FactorialTest2 {
             }
             System.out.printf("%2d!=%20d%n", i, result);
         }
-    } // main의 끝
+    }
 }

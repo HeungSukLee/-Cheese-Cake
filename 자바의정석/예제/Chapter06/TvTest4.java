@@ -1,19 +1,17 @@
-class TvTest4 { //객체배열을 생성하느 Example
-
+class TvTest4 {
     public static void main(String args[]) {
 
-        Tv[] tvArr = new Tv[3]; // new를 통하여 TV객체배열 생성.
-
-        // new를 통하여 TV객체를 생성하고 이 값을 객체배열의 원소로 대입.
+        Tv[] tvArr = new Tv[3];
+        //객체 배열 역시 생성이 가능하다.
         for (int i = 0; i < tvArr.length; i++) {
             tvArr[i] = new Tv();
-            tvArr[i].channel = i + 10; // tvArr[i]의 channel에 i+10을 저장
+            tvArr[i].channel = i + 10;
         }
-
-        for (int i = 0; i < tvArr.length; i++) {//각각 객체배열의 요소인 TV객체의 채널을 UP
-            tvArr[i].channelUp();  // tvArr[i]의 메서드를 호출. 채널이 1증가
+        for (int i = 0; i < tvArr.length; i++) {
+            tvArr[i].channelUp();
             System.out.printf("tvArr[%d].channel=%d%n", i, tvArr[i].channel);
         }
+
     }
 }
 /*

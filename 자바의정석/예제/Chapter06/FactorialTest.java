@@ -1,7 +1,7 @@
-class FactorialTest { //재귀함수사용
+class FactorialTest {  //재귀함수사용
 
     public static void main(String args[]) {
-        int result = factorial(4);  // int result = FactorialTest.factorial(4);
+        int result = factorial(4);
         System.out.println(result);
     }
     static int factorial(int n) {
@@ -10,9 +10,9 @@ class FactorialTest { //재귀함수사용
         if ( n == 1) {
             result = 1;
         } else {
-            result = n * factorial(n-1);		// 다시 메서드 자신을 호출한다.
+            result = n * factorial(n-1);
         }
-
         return result;
     }
+
 }

@@ -1,7 +1,8 @@
-class MyMathTest {
+class MyMathTest { // Math 함수가저장되어있는 클래스를 생성하고 그 함수들을 객체생성을 통하여 사용하는 example
+
     public static void main(String args[]) {
 
-        MyMath mm = new MyMath(); //객체를 생성하고 객체에 선언이 되어있는 함수를 사용하는 example이다.
+        MyMath mm = new MyMath();
         long result1 = mm.add(5L, 3L);
         long result2 = mm.subtract(5L, 3L);
         long result3 = mm.multiply(5L, 3L);
@@ -13,7 +14,7 @@ class MyMathTest {
     }
 }
 
-class MyMath {//MyMath 객체에는 더하기 빼기 곱하기 나누기 함수가 정의되어 있다.
+class MyMath {
     long add(long a, long b) {
         long result = a+b;
         return result;

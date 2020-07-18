@@ -1,9 +1,8 @@
-class StaticBlockTest
+class StaticBlockTest  // static 블럭을 사용하는 example
 {
     static int[] arr = new int[10];
-    static {//클래스 블럭을 통하여 배열에 원소를 입력해 줄 수 있다.
+    static { // static 블락을 통한 변수 초기화
         for(int i=0;i<arr.length;i++) {
-            // 1과 10사이의 임의의 값을 배열 arr에 저장한다.
             arr[i] = (int)(Math.random()*10) + 1;
         }
     }

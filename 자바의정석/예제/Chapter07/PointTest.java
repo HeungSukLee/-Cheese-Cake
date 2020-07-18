@@ -21,7 +21,8 @@ class Point3D extends Point2 { // 점 객체를 상속받는 객체 3차원 점 
     int z;
 
     Point3D(int x, int y, int z) {
-        super(x,y);//첫줄에는 조상의 생성자가 호출이 되는데 조상에서는 point()가 없으므로 super(x,y)라고 나타내었다.
+        super(x,y);
+        //첫줄에는 조상의 생성자가 호출이 되는데 조상에서는 Point()가 없으므로 super(x,y)라고 나타낸다.
         this.x = x;
         this.y = y;
         this.z = z;

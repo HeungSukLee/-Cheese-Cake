@@ -1,35 +1,34 @@
-class MemberCall { //인스턴스 변수,함수와 클래스 변수 함수의 차이를 설명하는 example
-    //인스턴스 변수 and 함수는 무조건 객체를 생성해야 사용이 가능하고,
-    //클래스 변수 adn 함수는 그냥도 사용이 가능하다.
+class MemberCall { // 인스턴스 변수, 인스텀수함수  vs  클래스 변수, 클래스함수의 차이
+//인스턴스 변수 함수는 클래스 변수 함수 사용가능
+    //but 반대는 불가함을 유의
 
     int iv = 10;
     static int cv = 20;
 
     int iv2 = cv;
-    //	static int cv2 = iv;		// 에러. 클래스변수는 인스턴스 변수를 사용할 수 없음. // c2가 생성될 떄 ivㄱ밧이 없다.
-    static int cv2 = new MemberCall().iv;	 // 이처럼 객체를 생성해야 사용가능.
-
+    //	static int cv2 = iv;
+    static int cv2 = new MemberCall().iv;
     static void staticMethod1() {
         System.out.println(cv);
-//		System.out.println(iv); // 에러. 클래스메서드에서 인스턴스변수를 사용불가.
+//		System.out.println(iv);
         MemberCall c = new MemberCall();
-        System.out.println(c.iv);   // 객체를 생성한 후에야 인스턴스변수의 참조가능.
+        System.out.println(c.iv);
     }
 
     void instanceMethod1() {
         System.out.println(cv);
-        System.out.println(iv); // 인스턴스메서드에서는 인스턴스변수를 바로 사용가능.
+        System.out.println(iv);
     }
 
     static void staticMethod2() {
         staticMethod1();
-//		instanceMethod1(); // 에러. 클래스메서드에서는 인스턴스메서드를 호출할 수 없음.
+//		instanceMethod1();
         MemberCall c = new MemberCall();
-        c.instanceMethod1(); // 인스턴스를 생성한 후에야 호출할 수 있음.
+        c.instanceMethod1();
     }
 
-    void instanceMethod2() {	// 인스턴스메서드에서는 인스턴스메서드와 클래스메서드
-        staticMethod1();		//  모두 인스턴스 생성없이 바로 호출이 가능하다.
+    void instanceMethod2() {
+        staticMethod1();
         instanceMethod1();
     }
 }

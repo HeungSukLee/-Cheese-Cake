@@ -1,7 +1,5 @@
 class BindingTest3{
     public static void main(String[] args) {
-
-
         Parent5 p = new Child5();
         Child5  c = new Child5();
 
@@ -12,7 +10,6 @@ class BindingTest3{
         c.method();//200 100 200
     }
 }
-
 class Parent5 {
     int x = 100;
     void method() {

@@ -5,13 +5,13 @@ class CastingTest1 {
         FireEngine fe = new FireEngine();
         FireEngine fe2 = null;
         //조상<>자손 형변환은 가능하다.
-        //하지만 자손에서 조상으로 형변환은 생략가능
-        //조상에서 자손으로의 형면환은 생략이 불가능하다.
+        // 자손 - >  조상 형변환은 생략가능.
+        // 조상 - >  자손 형변환은 생략불가.
 
         fe.water();
-        car = fe;    // car =(Car)fe;에서 형변환이 생략된 형태다.
+        car = fe;    // car =(Car)fe 이므로 자손이 조상으로 형변환 생략가능
 //		car.water();
-        fe2 = (FireEngine)car; // 자손타입 ← 조상타입
+        fe2 = (FireEngine)car; //조상이 자손으로 형변환은 생략이 불가능하다.
         fe2.water();
     }
 }

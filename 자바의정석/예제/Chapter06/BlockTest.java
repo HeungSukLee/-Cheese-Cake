@@ -1,16 +1,12 @@
-class BlockTest { //static 블럭은 처음에 한 번 만 실행이되고,
-    //인스턴스블락 및 생성자블락은
-    //BlockTest bt = new BlockTest()를 통해 객체가 생성될 떄마다.
-    //초기화 되어서 실행이 된다.
-    static {
+class BlockTest {
+    static { //static 블락은 처음에 실행할 떄 한번만 실행이 된다.//초기화블락
         System.out.println("static { }");
     }
-
-    {
+    {//초기화블락
         System.out.println("{ }");
     }
 
-    public BlockTest() {
+    public BlockTest() { //생성자
         System.out.println("생성자");
     }
 
